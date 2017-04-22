@@ -14,6 +14,7 @@ func bee_action_cbk():
 	var gs = get_tree().get_root().get_node("/root/game_state")
 	gs.food += 1
 	gs.material += 1
+	print("collect action")
 
 
 func get_levelup_cost():

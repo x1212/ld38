@@ -12,8 +12,13 @@ func _ready():
 
 func _process(delta):
 	path_follow += delta*200
+	var toggle_action = true
+	if ( assignment.is_in_range(get_pos()) ):
+		toggle_action = false
+		print("false")
 	if (path_follow > assignment.get_path().get_curve().get_baked_length()):
 		path_follow = 0.0
-	set_pos( assignment.get_path().get_curve().interpolate_baked(path_follow,true) )
-	print ( get_pos() )
-	print (path_follow )
+	set_pos( assignment.get_path().get_curve().interpolate_baked(path_follow,true) + assignment.get_pos() )
+	if ( toggle_action and assignment.is_in_range(get_pos()) ):
+		assignment.bee_action_cbk()
+		print("true")

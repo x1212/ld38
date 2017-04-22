@@ -14,7 +14,7 @@ func _ready():
 
 # called by bee when in range
 func bee_action_cbk():
-	pass
+	print("base action")
 
 
 func get_levelup_cost():
@@ -29,6 +29,7 @@ func get_path():
 
 func is_in_range(pos):
 	var vec = pos - get_pos()
-	if ( vec.length_squared() < 10.0 ):
+	if ( vec.length() < 20.0 ):
 		return true
+	#print(vec.length())
 	return false
