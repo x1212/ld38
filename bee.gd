@@ -11,7 +11,9 @@ func _ready():
 	set_process(true)
 
 func _process(delta):
-	path_follow += delta/10.0
-	if (path_follow > 1.0):
-		path_follow = path_follow - floor(path_follow)
-	set_pos( assignment.get_path().get_curve().interpolate(path_follow,true) )
+	path_follow += delta*200
+	if (path_follow > assignment.get_path().get_curve().get_baked_length()):
+		path_follow = 0.0
+	set_pos( assignment.get_path().get_curve().interpolate_baked(path_follow,true) )
+	print ( get_pos() )
+	print (path_follow )

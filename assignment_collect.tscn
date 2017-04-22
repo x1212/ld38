@@ -1,20 +1,23 @@
-[gd_scene load_steps=3 format=1]
+[gd_scene load_steps=4 format=1]
 
-[ext_resource path="res://assignment_collecting.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://assignment_collecting.gd" type="Script" id=2]
 
 [sub_resource type="Curve2D" id=1]
 
 bake_interval = 5.0
 _data = {
-"points": Vector2Array( 0, 0, 0, 0, 1.78479, 0.208069, 0, 0, 0, 0, 1802.27, 315.455, 0, 0, 0, 0, 1797.72, 481.316, 0, 0, 0, 0, 1.78479, 0.208069 )
+"points": Vector2Array( 0, 0, 0, 0, -1.75806, 4.18054, 0, 0, 0, 0, 1186.54, 317.727, 0, 0, 0, 0, 1143.37, 394.977, 0, 0, 0, 0, -1.75806, 4.18054 )
 }
 
 [node name="Sprite" type="Sprite"]
 
-script/script = ExtResource( 1 )
+texture = ExtResource( 1 )
+script/script = ExtResource( 2 )
 
 [node name="Path2D" type="Path2D" parent="."]
 
+z/relative = false
 curve = SubResource( 1 )
 
 

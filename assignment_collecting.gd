@@ -24,6 +24,6 @@ func get_assignment_max():
 
 # path for assigned bees to follow
 func get_path():
-	return null
+	return get_node("Path2D")
 
 
