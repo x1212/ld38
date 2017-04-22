@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=5 format=1]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://assignment_collecting.gd" type="Script" id=2]
+[ext_resource path="res://ui/ui.tscn" type="PackedScene" id=3]
 
 [sub_resource type="Curve2D" id=1]
 
@@ -19,5 +20,7 @@ script/script = ExtResource( 2 )
 [node name="Path2D" type="Path2D" parent="."]
 
 curve = SubResource( 1 )
+
+[node name="ui" parent="." instance=ExtResource( 3 )]
 
 
