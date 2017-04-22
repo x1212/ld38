@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=5 format=1]
 
 [ext_resource path="res://ui/ui.gd" type="Script" id=1]
 [ext_resource path="res://ui/minus.png" type="Texture" id=2]
 [ext_resource path="res://ui/plus.png" type="Texture" id=3]
+[ext_resource path="res://ui/up.png" type="Texture" id=4]
 
 [node name="ui" type="Control"]
 
@@ -22,10 +23,10 @@ focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 40.0
-margin/bottom = 14.0
+margin/left = 48.0
+margin/top = -30.0
+margin/right = 88.0
+margin/bottom = -16.0
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
@@ -64,8 +65,41 @@ textures/normal = ExtResource( 3 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
+[node name="levelup" type="TextureButton" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -61.0
+margin/top = -5.0
+margin/right = -21.0
+margin/bottom = 35.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 4 )
+params/resize_mode = 0
+params/stretch_mode = 0
+
+[node name="cost" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -56.0
+margin/top = 44.0
+margin/right = -16.0
+margin/bottom = 58.0
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
 [connection signal="pressed" from="minus" to="." method="_on_minus_pressed"]
 
 [connection signal="pressed" from="plus" to="." method="_on_plus_pressed"]
+
+[connection signal="pressed" from="levelup" to="." method="_on_levelup_pressed"]
 
 
