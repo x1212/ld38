@@ -16,10 +16,10 @@ func _ready():
 func _process(delta):
 	if (gs.weather == gs.NORMAL_WEATHER):
 		set_modulate(normal)
-		print(":)")
+		#print(":)")
 	elif (gs.weather == gs.GOOD_WEATHER):
 		set_modulate(good)
-		print(":D")
+		#print(":D")
 	elif (gs.weather == gs.BAD_WEATHER):
 		set_modulate(bad)
-		print(":(")
+		#print(":(")
