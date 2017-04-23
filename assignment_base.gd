@@ -26,7 +26,7 @@ func _process(delta):
 			print("?")
 
 # called by bee when in range
-func bee_action_cbk():
+func bee_action_cbk(bee):
 	print("base action")
 
 

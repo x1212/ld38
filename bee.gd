@@ -20,7 +20,7 @@ func _process(delta):
 		path_follow = 0.0
 	set_pos( assignment.get_path().get_curve().interpolate_baked(path_follow,true) + assignment.get_pos() )
 	if ( toggle_action and assignment.is_in_range(get_pos()) ):
-		assignment.bee_action_cbk()
+		assignment.bee_action_cbk(self)
 		if ( assignment.get_assigned() > assignment.get_assigned_goal() ):
 			get_tree().get_root().get_node("/root/game_state").free_bees += 1
 			assignment.unassign()

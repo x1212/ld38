@@ -6,7 +6,7 @@ extends "res://assignment_base.gd"
 
 
 # called by bee when in range
-func bee_action_cbk():
+func bee_action_cbk(bee):
 	var gs = get_tree().get_root().get_node("/root/game_state")
 	gs.food += 1
 	gs.material += 1

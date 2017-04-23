@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://assignment_guarding.gd" type="Script" id=2]
+[ext_resource path="res://ui/ui.tscn" type="PackedScene" id=3]
+
+[sub_resource type="Curve2D" id=1]
+
+bake_interval = 5.0
+_data = {
+"points": Vector2Array( 0, 0, 0, 0, 1.00342, 3.04504, 0, 0, 0, 0, 64.4704, -42.0499, 0, 0, 0, 0, 9.35434, 86.5542, 0, 0, 0, 0, 127.937, 4.71521, 0, 0, 0, 0, 92.8635, -87.1448, 0, 0, 0, 0, -60.7933, -123.889, 0, 0, 0, 0, -75.825, -18.6673, 0, 0, 0, 0, -72.4846, 56.4909, 0, 0, 0, 0, 1.00342, 3.04504 )
+}
+
+[node name="Sprite" type="Sprite"]
+
+texture = ExtResource( 1 )
+script/script = ExtResource( 2 )
+
+[node name="Path2D" type="Path2D" parent="."]
+
+curve = SubResource( 1 )
+
+[node name="ui" parent="." instance=ExtResource( 3 )]
+
+
