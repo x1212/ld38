@@ -14,7 +14,7 @@ func _ready():
 	pass
 
 func _process(delta):
-	print("!")
+	#print("!")
 	var gs = get_tree().get_root().get_node("/root/game_state")
 	if ( get_assigned() < get_assigned_goal() ):
 		if ( gs.free_bees > 0 ):
@@ -23,7 +23,7 @@ func _process(delta):
 			var bee = bee_scene.instance()
 			bee.assignment = self
 			get_parent().add_child(bee)
-			print("?")
+			#print("?")
 
 # called by bee when in range
 func bee_action_cbk(bee):

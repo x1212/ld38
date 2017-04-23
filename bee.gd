@@ -16,7 +16,7 @@ func _process(delta):
 	var tmp = get_pos()
 	if ( assignment.is_in_range(get_pos()) ):
 		toggle_action = false
-		print("false")
+		#print("false")
 	if (path_follow > assignment.get_path().get_curve().get_baked_length()):
 		path_follow = 0.0
 	set_pos( assignment.get_path().get_curve().interpolate_baked(path_follow,true) + assignment.get_pos() )
@@ -26,7 +26,7 @@ func _process(delta):
 			get_tree().get_root().get_node("/root/game_state").free_bees += 1
 			assignment.unassign()
 			queue_free()
-		print("true")
+		#print("true")
 	if ( (get_pos() - tmp).x < 0 ):
 		set_scale(Vector2(-1,1))
 	else:

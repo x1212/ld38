@@ -1,16 +1,17 @@
-[gd_scene load_steps=12 format=1]
+[gd_scene load_steps=13 format=1]
 
 [ext_resource path="res://ui/camera.gd" type="Script" id=1]
 [ext_resource path="res://sky_std.png" type="Texture" id=2]
-[ext_resource path="res://grass_std.png" type="Texture" id=3]
-[ext_resource path="res://flowers_fg.png" type="Texture" id=4]
-[ext_resource path="res://gamebg.png" type="Texture" id=5]
-[ext_resource path="res://assignment_collect.tscn" type="PackedScene" id=6]
-[ext_resource path="res://theme.tres" type="Theme" id=7]
-[ext_resource path="res://assignment_guard.tscn" type="PackedScene" id=8]
-[ext_resource path="res://assignment_nest.tscn" type="PackedScene" id=9]
-[ext_resource path="res://hud.tscn" type="PackedScene" id=10]
-[ext_resource path="res://winner.tscn" type="PackedScene" id=11]
+[ext_resource path="res://ui/sky.gd" type="Script" id=3]
+[ext_resource path="res://grass_std.png" type="Texture" id=4]
+[ext_resource path="res://flowers_fg.png" type="Texture" id=5]
+[ext_resource path="res://gamebg.png" type="Texture" id=6]
+[ext_resource path="res://assignment_collect.tscn" type="PackedScene" id=7]
+[ext_resource path="res://theme.tres" type="Theme" id=8]
+[ext_resource path="res://assignment_guard.tscn" type="PackedScene" id=9]
+[ext_resource path="res://assignment_nest.tscn" type="PackedScene" id=10]
+[ext_resource path="res://hud.tscn" type="PackedScene" id=11]
+[ext_resource path="res://winner.tscn" type="PackedScene" id=12]
 
 [node name="Node" type="Node"]
 
@@ -57,6 +58,11 @@ motion/mirroring = Vector2( 0, 0 )
 
 texture = ExtResource( 2 )
 centered = false
+modulate = Color( 0, 0, 0, 1 )
+script/script = ExtResource( 3 )
+normal = Color( 0.722656, 0.722656, 0.722656, 1 )
+good = Color( 1, 1, 1, 1 )
+bad = Color( 0.359375, 0.359375, 0.359375, 1 )
 
 [node name="ParallaxBackground 2" type="ParallaxBackground" parent="."]
 
@@ -79,8 +85,12 @@ motion/mirroring = Vector2( 0, 0 )
 
 [node name="Sprite 2" type="Sprite" parent="ParallaxBackground 2/CanvasLayer1"]
 
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 offset = Vector2( 650, 300 )
+script/script = ExtResource( 3 )
+normal = Color( 0.785156, 0.785156, 0.785156, 1 )
+good = Color( 1, 1, 1, 1 )
+bad = Color( 0.539062, 0.539062, 0.539062, 1 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -104,8 +114,12 @@ motion/mirroring = Vector2( 0, 0 )
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/CanvasLayer"]
 
 transform/pos = Vector2( 193.534, -235.276 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 offset = Vector2( 350, 200 )
+script/script = ExtResource( 3 )
+normal = Color( 0.863281, 0.863281, 0.863281, 1 )
+good = Color( 1, 1, 1, 1 )
+bad = Color( 0.59375, 0.59375, 0.59375, 1 )
 
 [node name="gameplay" type="ParallaxBackground" parent="."]
 
@@ -129,31 +143,35 @@ motion/mirroring = Vector2( 0, 0 )
 [node name="Sprite" type="Sprite" parent="gameplay/CanvasLayer3"]
 
 transform/pos = Vector2( 159.381, 151.791 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
+script/script = ExtResource( 3 )
+normal = Color( 0.921875, 0.921875, 0.921875, 1 )
+good = Color( 1, 1, 1, 1 )
+bad = Color( 0.738281, 0.738281, 0.738281, 1 )
 
-[node name="Sprite 2" parent="gameplay/CanvasLayer3" instance=ExtResource( 6 )]
+[node name="Sprite 2" parent="gameplay/CanvasLayer3" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 388.403, 337.735 )
 
 [node name="ui" parent="gameplay/CanvasLayer3/Sprite 2"]
 
-theme/theme = ExtResource( 7 )
+theme/theme = ExtResource( 8 )
 
-[node name="Sprite 3" parent="gameplay/CanvasLayer3" instance=ExtResource( 8 )]
+[node name="Sprite 3" parent="gameplay/CanvasLayer3" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 694.444, 531.269 )
 
 [node name="ui" parent="gameplay/CanvasLayer3/Sprite 3"]
 
-theme/theme = ExtResource( 7 )
+theme/theme = ExtResource( 8 )
 
-[node name="Sprite 4" parent="gameplay/CanvasLayer3" instance=ExtResource( 9 )]
+[node name="Sprite 4" parent="gameplay/CanvasLayer3" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( -3.79468, 269.429 )
 
 [node name="ui" parent="gameplay/CanvasLayer3/Sprite 4"]
 
-theme/theme = ExtResource( 7 )
+theme/theme = ExtResource( 8 )
 
 [node name="hud" type="CanvasLayer" parent="."]
 
@@ -162,11 +180,11 @@ offset = Vector2( 0, 0 )
 rotation = 0.0
 scale = Vector2( 1, 1 )
 
-[node name="hud" parent="hud" instance=ExtResource( 10 )]
+[node name="hud" parent="hud" instance=ExtResource( 11 )]
 
-theme/theme = ExtResource( 7 )
+theme/theme = ExtResource( 8 )
 
-[node name="TextureFrame" parent="hud" instance=ExtResource( 11 )]
+[node name="TextureFrame" parent="hud" instance=ExtResource( 12 )]
 
 
 [editable path="gameplay/CanvasLayer3/Sprite 2"]
