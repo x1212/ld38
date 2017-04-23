@@ -14,6 +14,12 @@ var goal_collecting_bees = 0
 var goal_guarding_bees = 0
 var goal_building_bees = 0
 
+const NORMAL_WEATHER = 0
+const GOOD_WEATHER = 1
+const BAD_WEATHER = 2
+
+var weather = NORMAL_WEATHER
+
 var next_event = null
 
 

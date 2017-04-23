@@ -8,11 +8,12 @@ var spawn_cooldown = 10
 
 func bee_action_cbk( bee ):
 	var gs = get_tree().get_root().get_node("/root/game_state")
-	if (gs.food > 0):
-		gs.food -= 1
+	if (gs.food > 2):
+		gs.food -= 3
 		spawn_cooldown -= 1
 		if (spawn_cooldown <= 0):
 			gs.free_bees += 1
+			spawn_cooldown = 10
 	else:
 		unassign()
 		bee.queue_free()
@@ -20,7 +21,7 @@ func bee_action_cbk( bee ):
 
 
 func get_levelup_cost():
-	return level * 4
+	return level * 4 * (floor(level/4)+1)
 
 func get_assignment_max():
 	return level * 2 + 2

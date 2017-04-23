@@ -10,4 +10,10 @@ func _ready():
 	set_process(true)
 
 func _process(delta):
-	set_text(str(gs.food))
+	set_text(str(gs.food)+"/300")
+	if (gs.food >= 300):
+		set("custom_colors/font_color", Color(0,1,0))
+	elif (gs.food <= 2):
+		set("custom_colors/font_color", Color(1,0,0))
+	else:
+		set("custom_colors/font_color", Color(1,1,1))
