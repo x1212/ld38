@@ -12,16 +12,19 @@ const EVENT_INVASION = 3
 var normal_weather_scene = preload("res://ui/event_normal_weather.tscn")
 var good_weather_scene = preload("res://ui/event_good_weather.tscn")
 var bad_weather_scene = preload("res://ui/event_bad_weather.tscn")
+var invasion_scene = preload("res://ui/event_wasp_invasion.tscn")
 
 func new_event():
 	var event
 	var rand = randi()%100
-	if (rand < 50):
+	if (rand < 45):
 		event = normal_weather_scene.instance()
-	elif (rand < 80):
+	elif (rand < 75):
 		event = good_weather_scene.instance()
-	else:
+	elif (rand < 90):
 		event = bad_weather_scene.instance()
+	else:
+		event = invasion_scene.instance()
 	add_child(event)
 
 func _ready():
