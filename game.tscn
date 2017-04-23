@@ -116,7 +116,7 @@ motion/mirroring = Vector2( 0, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/CanvasLayer"]
 
-transform/pos = Vector2( 193.534, -235.276 )
+transform/pos = Vector2( 193.534, -300.276 )
 texture = ExtResource( 6 )
 offset = Vector2( 350, 200 )
 script/script = ExtResource( 4 )
@@ -145,7 +145,7 @@ motion/mirroring = Vector2( 0, 0 )
 
 [node name="Sprite" type="Sprite" parent="gameplay/CanvasLayer3"]
 
-transform/pos = Vector2( 159.381, 151.791 )
+transform/pos = Vector2( 159.381, 100.791 )
 texture = ExtResource( 7 )
 script/script = ExtResource( 4 )
 normal = Color( 0.921875, 0.921875, 0.921875, 1 )
@@ -154,7 +154,7 @@ bad = Color( 0.738281, 0.738281, 0.738281, 1 )
 
 [node name="Sprite 2" parent="gameplay/CanvasLayer3" instance=ExtResource( 8 )]
 
-transform/pos = Vector2( 388.403, 337.735 )
+transform/pos = Vector2( 385.403, 237.735 )
 
 [node name="ui" parent="gameplay/CanvasLayer3/Sprite 2"]
 
@@ -162,7 +162,7 @@ theme/theme = ExtResource( 9 )
 
 [node name="Sprite 3" parent="gameplay/CanvasLayer3" instance=ExtResource( 10 )]
 
-transform/pos = Vector2( 694.444, 531.269 )
+transform/pos = Vector2( 691.444, 431.269 )
 
 [node name="ui" parent="gameplay/CanvasLayer3/Sprite 3"]
 
@@ -170,7 +170,7 @@ theme/theme = ExtResource( 9 )
 
 [node name="Sprite 4" parent="gameplay/CanvasLayer3" instance=ExtResource( 11 )]
 
-transform/pos = Vector2( -3.79468, 269.429 )
+transform/pos = Vector2( -6.79468, 169.429 )
 
 [node name="ui" parent="gameplay/CanvasLayer3/Sprite 4"]
 

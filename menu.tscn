@@ -6,7 +6,7 @@
 [ext_resource path="res://grass_std.png" type="Texture" id=4]
 [ext_resource path="res://flowers_fg.png" type="Texture" id=5]
 [ext_resource path="res://gamebg.png" type="Texture" id=6]
-[ext_resource path="res://ui/start.png" type="Texture" id=7]
+[ext_resource path="res://collecting.png" type="Texture" id=7]
 [ext_resource path="res://ui/start.gd" type="Script" id=8]
 
 [node name="Node" type="Node"]
@@ -109,7 +109,7 @@ motion/mirroring = Vector2( 0, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/CanvasLayer"]
 
-transform/pos = Vector2( 193.534, -235.276 )
+transform/pos = Vector2( 193.534, -300.276 )
 texture = ExtResource( 5 )
 offset = Vector2( 350, 200 )
 script/script = ExtResource( 3 )
@@ -138,7 +138,7 @@ motion/mirroring = Vector2( 0, 0 )
 
 [node name="Sprite" type="Sprite" parent="gameplay/CanvasLayer3"]
 
-transform/pos = Vector2( 159.381, 151.791 )
+transform/pos = Vector2( 159.381, 100 )
 texture = ExtResource( 6 )
 script/script = ExtResource( 3 )
 normal = Color( 0.921875, 0.921875, 0.921875, 1 )
