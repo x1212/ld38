@@ -31,5 +31,7 @@ func _ready():
 
 
 func _process(delta):
-	
+	if (free_bees >= 100 and food >= 300):
+		pass
+		#todo: win!
 	pass

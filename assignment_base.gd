@@ -7,7 +7,7 @@ extends Node2D
 var bee_scene = preload("res://bee.tscn")
 
 var goal = 0
-var level = 0
+var level = 1
 
 func _ready():
 	set_process( true )

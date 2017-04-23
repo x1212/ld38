@@ -1,0 +1,154 @@
+[gd_scene load_steps=10 format=1]
+
+[ext_resource path="res://ui/camera.gd" type="Script" id=1]
+[ext_resource path="res://sky_std.png" type="Texture" id=2]
+[ext_resource path="res://grass_std.png" type="Texture" id=3]
+[ext_resource path="res://flowers_fg.png" type="Texture" id=4]
+[ext_resource path="res://gamebg.png" type="Texture" id=5]
+[ext_resource path="res://assignment_collect.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assignment_guard.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assignment_nest.tscn" type="PackedScene" id=8]
+[ext_resource path="res://hud.tscn" type="PackedScene" id=9]
+
+[node name="Node" type="Node"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit/left = -10000000
+limit/top = -10000000
+limit/right = 10000000
+limit/bottom = 10000000
+drag_margin/h_enabled = true
+drag_margin/v_enabled = true
+smoothing/enable = false
+smoothing/speed = 5.0
+drag_margin/left = 0.2
+drag_margin/top = 0.2
+drag_margin/right = 0.2
+drag_margin/bottom = 0.2
+script/script = ExtResource( 1 )
+
+[node name="ParallaxBackground 3" type="ParallaxBackground" parent="."]
+
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+scroll/offset = Vector2( 0, 0 )
+scroll/base_offset = Vector2( 0, 0 )
+scroll/base_scale = Vector2( 0, 0 )
+scroll/limit_begin = Vector2( 0, 0 )
+scroll/limit_end = Vector2( 0, 0 )
+scroll/ignore_camera_zoom = true
+
+[node name="CanvasLayer2" type="ParallaxLayer" parent="ParallaxBackground 3"]
+
+motion/scale = Vector2( 1, 1 )
+motion/offset = Vector2( 0, 0 )
+motion/mirroring = Vector2( 0, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground 3/CanvasLayer2"]
+
+texture = ExtResource( 2 )
+centered = false
+
+[node name="ParallaxBackground 2" type="ParallaxBackground" parent="."]
+
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+scroll/offset = Vector2( 0, 0 )
+scroll/base_offset = Vector2( 0, 0 )
+scroll/base_scale = Vector2( 0.25, 0.25 )
+scroll/limit_begin = Vector2( 0, 0 )
+scroll/limit_end = Vector2( 0, 0 )
+scroll/ignore_camera_zoom = true
+
+[node name="CanvasLayer1" type="ParallaxLayer" parent="ParallaxBackground 2"]
+
+motion/scale = Vector2( 1, 1 )
+motion/offset = Vector2( 0, 0 )
+motion/mirroring = Vector2( 0, 0 )
+
+[node name="Sprite 2" type="Sprite" parent="ParallaxBackground 2/CanvasLayer1"]
+
+texture = ExtResource( 3 )
+offset = Vector2( 650, 300 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+scroll/offset = Vector2( 0, 0 )
+scroll/base_offset = Vector2( 0, 0 )
+scroll/base_scale = Vector2( 0.5, 0.5 )
+scroll/limit_begin = Vector2( 0, 0 )
+scroll/limit_end = Vector2( 0, 0 )
+scroll/ignore_camera_zoom = true
+
+[node name="CanvasLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+motion/scale = Vector2( 1, 1 )
+motion/offset = Vector2( 0, 0 )
+motion/mirroring = Vector2( 0, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/CanvasLayer"]
+
+transform/pos = Vector2( 193.534, -235.276 )
+texture = ExtResource( 4 )
+offset = Vector2( 350, 200 )
+
+[node name="gameplay" type="ParallaxBackground" parent="."]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+scroll/offset = Vector2( 0, 0 )
+scroll/base_offset = Vector2( 0, 0 )
+scroll/base_scale = Vector2( 1, 1 )
+scroll/limit_begin = Vector2( 0, 0 )
+scroll/limit_end = Vector2( 0, 0 )
+scroll/ignore_camera_zoom = true
+
+[node name="CanvasLayer3" type="ParallaxLayer" parent="gameplay"]
+
+motion/scale = Vector2( 1, 1 )
+motion/offset = Vector2( 0, 0 )
+motion/mirroring = Vector2( 0, 0 )
+
+[node name="Sprite" type="Sprite" parent="gameplay/CanvasLayer3"]
+
+transform/pos = Vector2( 159.381, 151.791 )
+texture = ExtResource( 5 )
+
+[node name="Sprite 2" parent="gameplay/CanvasLayer3" instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 388.403, 337.735 )
+
+[node name="Sprite 3" parent="gameplay/CanvasLayer3" instance=ExtResource( 7 )]
+
+transform/pos = Vector2( 694.444, 531.269 )
+
+[node name="Sprite 4" parent="gameplay/CanvasLayer3" instance=ExtResource( 8 )]
+
+transform/pos = Vector2( -3.79468, 269.429 )
+
+[node name="hud" type="CanvasLayer" parent="."]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+
+[node name="hud" parent="hud" instance=ExtResource( 9 )]
+
+
+[editable path="gameplay/CanvasLayer3/Sprite 4"]
