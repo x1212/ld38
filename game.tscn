@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=1]
+[gd_scene load_steps=11 format=1]
 
 [ext_resource path="res://ui/camera.gd" type="Script" id=1]
 [ext_resource path="res://sky_std.png" type="Texture" id=2]
@@ -6,9 +6,10 @@
 [ext_resource path="res://flowers_fg.png" type="Texture" id=4]
 [ext_resource path="res://gamebg.png" type="Texture" id=5]
 [ext_resource path="res://assignment_collect.tscn" type="PackedScene" id=6]
-[ext_resource path="res://assignment_guard.tscn" type="PackedScene" id=7]
-[ext_resource path="res://assignment_nest.tscn" type="PackedScene" id=8]
-[ext_resource path="res://hud.tscn" type="PackedScene" id=9]
+[ext_resource path="res://theme.tres" type="Theme" id=7]
+[ext_resource path="res://assignment_guard.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assignment_nest.tscn" type="PackedScene" id=9]
+[ext_resource path="res://hud.tscn" type="PackedScene" id=10]
 
 [node name="Node" type="Node"]
 
@@ -133,13 +134,25 @@ texture = ExtResource( 5 )
 
 transform/pos = Vector2( 388.403, 337.735 )
 
-[node name="Sprite 3" parent="gameplay/CanvasLayer3" instance=ExtResource( 7 )]
+[node name="ui" parent="gameplay/CanvasLayer3/Sprite 2"]
+
+theme/theme = ExtResource( 7 )
+
+[node name="Sprite 3" parent="gameplay/CanvasLayer3" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 694.444, 531.269 )
 
-[node name="Sprite 4" parent="gameplay/CanvasLayer3" instance=ExtResource( 8 )]
+[node name="ui" parent="gameplay/CanvasLayer3/Sprite 3"]
+
+theme/theme = ExtResource( 7 )
+
+[node name="Sprite 4" parent="gameplay/CanvasLayer3" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( -3.79468, 269.429 )
+
+[node name="ui" parent="gameplay/CanvasLayer3/Sprite 4"]
+
+theme/theme = ExtResource( 7 )
 
 [node name="hud" type="CanvasLayer" parent="."]
 
@@ -148,7 +161,11 @@ offset = Vector2( 0, 0 )
 rotation = 0.0
 scale = Vector2( 1, 1 )
 
-[node name="hud" parent="hud" instance=ExtResource( 9 )]
+[node name="hud" parent="hud" instance=ExtResource( 10 )]
+
+theme/theme = ExtResource( 7 )
 
 
+[editable path="gameplay/CanvasLayer3/Sprite 2"]
+[editable path="gameplay/CanvasLayer3/Sprite 3"]
 [editable path="gameplay/CanvasLayer3/Sprite 4"]
