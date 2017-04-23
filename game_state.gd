@@ -18,6 +18,9 @@ const NORMAL_WEATHER = 0
 const GOOD_WEATHER = 1
 const BAD_WEATHER = 2
 
+const GOAL_BEES = 30
+const GOAL_FOOD= 200
+
 var weather = NORMAL_WEATHER
 
 var next_event = null
@@ -31,6 +34,6 @@ func _ready():
 
 
 func _process(delta):
-	if (free_bees >= 100 and food >= 300):
+	if (free_bees >= GOAL_BEES and food >= GOAL_FOOD):
 		won = true
 	pass

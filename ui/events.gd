@@ -33,4 +33,4 @@ func _ready():
 	new_event()
 	get_child(0).set_scale(Vector2(1.0,1.0))
 	if ( get_child(1) != null ):
-		get_child(1).set_scale(Vector2(0.8,0.8))
+		get_child(1).get_node("TextureFrame").set_scale(Vector2(0.8,0.8))

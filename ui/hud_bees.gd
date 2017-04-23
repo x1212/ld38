@@ -10,8 +10,8 @@ func _ready():
 	set_process(true)
 
 func _process(delta):
-	set_text(str(gs.free_bees)+"/100")
-	if (gs.free_bees >= 100):
+	set_text(str(gs.free_bees)+"/"+str(gs.GOAL_BEES))
+	if (gs.free_bees >= gs.GOAL_BEES):
 		set("custom_colors/font_color", Color(0,1,0))
 	elif (gs.free_bees <= 0):
 		set("custom_colors/font_color", Color(1,0,0))
