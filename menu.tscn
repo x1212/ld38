@@ -6,7 +6,7 @@
 [ext_resource path="res://grass_std.png" type="Texture" id=4]
 [ext_resource path="res://flowers_fg.png" type="Texture" id=5]
 [ext_resource path="res://gamebg.png" type="Texture" id=6]
-[ext_resource path="res://collecting.png" type="Texture" id=7]
+[ext_resource path="res://ui/start.png" type="Texture" id=7]
 [ext_resource path="res://ui/start.gd" type="Script" id=8]
 
 [node name="Node" type="Node"]
