@@ -1,4 +1,4 @@
-extends Sprite
+extends AnimatedSprite
 
 # class member variables go here, for example:
 # var a = 2
@@ -13,6 +13,7 @@ func _ready():
 func _process(delta):
 	path_follow += delta*200
 	var toggle_action = true
+	var tmp = get_pos()
 	if ( assignment.is_in_range(get_pos()) ):
 		toggle_action = false
 		print("false")
@@ -26,3 +27,7 @@ func _process(delta):
 			assignment.unassign()
 			queue_free()
 		print("true")
+	if ( (get_pos() - tmp).x < 0 ):
+		set_scale(Vector2(-1,1))
+	else:
+		set_scale(Vector2(1,1))

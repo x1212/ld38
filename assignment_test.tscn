@@ -1,11 +1,10 @@
-[gd_scene load_steps=7 format=1]
+[gd_scene load_steps=6 format=1]
 
 [ext_resource path="res://assignment_test.gd" type="Script" id=1]
 [ext_resource path="res://assignment_collect.tscn" type="PackedScene" id=2]
-[ext_resource path="res://bee.tscn" type="PackedScene" id=3]
-[ext_resource path="res://assignment_nest.tscn" type="PackedScene" id=4]
-[ext_resource path="res://assignment_guard.tscn" type="PackedScene" id=5]
-[ext_resource path="res://hud.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assignment_nest.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assignment_guard.tscn" type="PackedScene" id=4]
+[ext_resource path="res://hud.tscn" type="PackedScene" id=5]
 
 [node name="Node2D" type="Node2D"]
 
@@ -13,18 +12,18 @@ script/script = ExtResource( 1 )
 
 [node name="Sprite" parent="." instance=ExtResource( 2 )]
 
-transform/pos = Vector2( 131, 116 )
+transform/pos = Vector2( 347, 205 )
 
-[node name="Sprite 2" parent="." instance=ExtResource( 3 )]
+[node name="Sprite 3" parent="." instance=ExtResource( 3 )]
 
-[node name="Sprite 3" parent="." instance=ExtResource( 4 )]
+transform/pos = Vector2( 453, 445 )
 
-transform/pos = Vector2( 308, 384 )
+[node name="Sprite 4" parent="." instance=ExtResource( 4 )]
 
-[node name="Sprite 4" parent="." instance=ExtResource( 5 )]
+transform/pos = Vector2( 821, 470 )
 
-transform/pos = Vector2( 840, 162 )
-
-[node name="hud" parent="." instance=ExtResource( 6 )]
+[node name="hud" parent="." instance=ExtResource( 5 )]
 
 
+[editable path="Sprite 3"]
+[editable path="Sprite 4"]

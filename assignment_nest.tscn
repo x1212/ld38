@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=1]
 
-[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://nest.png" type="Texture" id=1]
 [ext_resource path="res://assignment_nest.gd" type="Script" id=2]
 [ext_resource path="res://ui/ui.tscn" type="PackedScene" id=3]
 
@@ -8,7 +8,7 @@
 
 bake_interval = 5.0
 _data = {
-"points": Vector2Array( 0, 0, 0, 0, 1, 2, 0, 0, 0, 0, 64, 50, 0, 0, 0, 0, 130, 12, 0, 0, 0, 0, 148, -41, 0, 0, 0, 0, 97, -129, 0, 0, 0, 0, -67, -152, 0, 0, 0, 0, -108, -83, 0, 0, 0, 0, -149, 71, 0, 0, 0, 0, -46, 115, 0, 0, 0, 0, 15, 104, 0, 0, 0, 0, 1, 2 )
+"points": Vector2Array( 0, 0, 0, 0, 1, 2, 0, 0, 0, 0, 64, 50, 0, 0, 0, 0, 102, -21, 0, 0, 0, 0, 76, -82, 0, 0, 0, 0, 20, -145, 0, 0, 0, 0, -100, -223, 0, 0, 0, 0, -91, -140, 0, 0, 0, 0, -109, -26, 0, 0, 0, 0, -88, 61, 0, 0, 0, 0, 1, 78, 0, 0, 0, 0, 1, 2 )
 }
 
 [node name="Sprite" type="Sprite"]
