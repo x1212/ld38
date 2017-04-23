@@ -21,7 +21,7 @@ const BAD_WEATHER = 2
 var weather = NORMAL_WEATHER
 
 var next_event = null
-
+var won = false
 
 func _ready():
 	# Called every time the node is added to the scene.
@@ -32,6 +32,5 @@ func _ready():
 
 func _process(delta):
 	if (free_bees >= 100 and food >= 300):
-		pass
-		#todo: win!
+		won = true
 	pass

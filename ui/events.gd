@@ -27,6 +27,10 @@ func new_event():
 		event = invasion_scene.instance()
 	add_child(event)
 
+
 func _ready():
 	new_event()
 	new_event()
+	get_child(0).set_scale(Vector2(1.0,1.0))
+	if ( get_child(1) != null ):
+		get_child(1).set_scale(Vector2(0.8,0.8))

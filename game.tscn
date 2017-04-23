@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=1]
+[gd_scene load_steps=12 format=1]
 
 [ext_resource path="res://ui/camera.gd" type="Script" id=1]
 [ext_resource path="res://sky_std.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://assignment_guard.tscn" type="PackedScene" id=8]
 [ext_resource path="res://assignment_nest.tscn" type="PackedScene" id=9]
 [ext_resource path="res://hud.tscn" type="PackedScene" id=10]
+[ext_resource path="res://winner.tscn" type="PackedScene" id=11]
 
 [node name="Node" type="Node"]
 
@@ -164,6 +165,8 @@ scale = Vector2( 1, 1 )
 [node name="hud" parent="hud" instance=ExtResource( 10 )]
 
 theme/theme = ExtResource( 7 )
+
+[node name="TextureFrame" parent="hud" instance=ExtResource( 11 )]
 
 
 [editable path="gameplay/CanvasLayer3/Sprite 2"]
